@@ -2,9 +2,9 @@
     <h2>
         Nord-Theme for Google
     </h2>
-    <sup>
+    <p>
         🔵 Modernizing Google pages with the Nord color palette... 🔵
-    </sup>
+    </p>
 </div>
 </br>
 
