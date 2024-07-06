@@ -17,8 +17,10 @@
 - Not based on class names
 
 ## How to use
-1. Install any userscript manager extension like [Tampermonkey](https://chromewebstore.google.com/detail/nbhcbdghjpllgmfilhnhkllmkecfmpld) / [Violentmonkey](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag) or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey)
-2. Open <a href="https://github.com/amoAR/Nord-Google-V2/raw/main/Nord_Google.user.js" target="_blank">This</a> link & install! :tada:
+1. _Install_ any userscript manager extension like [Tampermonkey](https://chromewebstore.google.com/detail/nbhcbdghjpllgmfilhnhkllmkecfmpld) / [Violentmonkey](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag) or [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey)\
+or literally any monkey that exist :smiley:
+2. _Open_ <a href="https://github.com/amoAR/Nord-Google-V2/raw/main/Nord_Google.user.js" target="_blank">This</a> link & install! :tada:
+3. _Search_ in [Google!](https://www.google.com/) :sunglasses:
 
 ##### To work on the search results page, you must give the _`Allow access to search page results`_ permission for extension.
 
