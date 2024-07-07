@@ -60,11 +60,20 @@ function Run(observer) {
                   break;
                 case "rgb(32, 33, 36)":
                 case "rgb(40, 41, 42)":
+                case "rgb(45, 49, 51)":
                 case "rgb(48, 49, 52)":
                 case "rgb(49, 51, 53)":
                 case "rgb(44, 48, 61)":
                 case "rgb(51, 52, 56)":
                 case "rgb(53, 48, 40)":
+                case "rgb(36, 39, 41)":
+                case "rgb(45, 49, 51)":
+                case "rgb(48, 76, 85)":
+                case "rgb(43, 75, 85)":
+                case "rgb(86, 96, 100)":
+                case "rgb(232, 242, 247)":
+                case "rgb(189, 200, 205)":
+                case "rgb(117, 211, 239)":
                 case "rgb(104, 93, 76)":
                   setBackColor(el, '--my-secondary-color');
                   break;
