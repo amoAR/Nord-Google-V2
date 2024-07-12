@@ -56,6 +56,7 @@ function Run(observer) {
               switch (elStyle) {
                 case "rgb(31, 31, 31)":
                 case "rgb(32, 33, 36)":
+                case "rgb(255, 255, 255)":
                   setBackColor(el, '--my-primary-color');
                   break;
                 case "rgb(32, 33, 36)":
@@ -64,17 +65,10 @@ function Run(observer) {
                 case "rgb(48, 49, 52)":
                 case "rgb(49, 51, 53)":
                 case "rgb(44, 48, 61)":
-                case "rgb(51, 52, 56)":
-                case "rgb(53, 48, 40)":
                 case "rgb(36, 39, 41)":
                 case "rgb(45, 49, 51)":
-                case "rgb(48, 76, 85)":
-                case "rgb(43, 75, 85)":
                 case "rgb(86, 96, 100)":
-                case "rgb(232, 242, 247)":
-                case "rgb(189, 200, 205)":
-                case "rgb(117, 211, 239)":
-                case "rgb(104, 93, 76)":
+                case "rgb(249, 249, 249)":
                   setBackColor(el, '--my-secondary-color');
                   break;
                 case "rgb(23, 23, 23)":
@@ -91,15 +85,17 @@ function Run(observer) {
 
           if (elStyle != null && elStyle != undefined)
             if (!valueFilterList.indexOf(el) >= 0) {
-              switch (elStyle) {
-                case findTerm(elStyle, "255, 255, 255"):
-                case findTerm(elStyle, "154, 160, 166"):
-                case findTerm(elStyle, "49, 51, 53"):
-                case findTerm(elStyle, "60, 64, 67"):
-                case findTerm(elStyle, "68, 71, 70"):
-                case findTerm(elStyle, "5, 6, 7"):
-                  el.style.cssText = 'border-color: var(--my-light-border-color) !important; background-color: var(--my-secondary-color); border-radius: 1rem;'
-                  break;
+              if (el.tagName !== "IFRAME") {
+                switch (elStyle) {
+                  case findTerm(elStyle, "255, 255, 255"):
+                  case findTerm(elStyle, "154, 160, 166"):
+                  case findTerm(elStyle, "49, 51, 53"):
+                  case findTerm(elStyle, "60, 64, 67"):
+                  case findTerm(elStyle, "68, 71, 70"):
+                  case findTerm(elStyle, "5, 6, 7"):
+                    el.style.cssText = 'border-color: var(--my-light-border-color) !important; background-color: var(--my-secondary-color); border-radius: 1rem;'
+                    break;
+                }
               }
             }
         });
@@ -130,11 +126,17 @@ function Run(observer) {
             background: transparent !important;
           }
           
+          #rc-anchor-container,
+          .rc-anchor,
+          div[aria-label="نتایج ویژه"] > div:first-of-type > div:first-of-type > div,
+          div[aria-label="Featured results"] > div:first-of-type > div:first-of-type > div,
           #bres div[data-q] > div:first-of-type div[role="button"] > div:nth-child(2),
           div:has(> div:last-child#tools_1) + div a > div:first-of-type,
           div:has(> div > div > div > video) + div,
           hr + div:not(:has(a)),
-          .b2Rnsc
+          .b2Rnsc,
+          div:has(> div div[data-gmc]) c-wiz > div:first-of-type,
+          div:has(> div div[data-gmc]) c-wiz > div:first-of-type > div:first-child > div:first-child
           {
             background: var(--my-secondary-color) !important;
             background-color: var(--my-secondary-color) !important;
@@ -167,7 +169,8 @@ function Run(observer) {
           div.customCssInjected:has(a[tabindex="0"] + a[href^="https://support.google.com"]):first-of-type:not(#fbar),
           #rhsads ~ div[class="kp-wholepage-osrp"] > div:last-of-type #media_result_group,
           div.customCssInjected[data-phone_number],
-          #main ~ *
+          #main ~ *:not(div:has(> div div[data-gmc])),
+          div:has(> div div[data-gmc]) c-wiz + div
           {
             display: none;
           }
@@ -224,7 +227,9 @@ function Run(observer) {
           div[role="complementary"] hr.customCssInjected + div.customCssInjected,
           g-more-link > div.customCssInjected,
           g-left-button g-fab,
-          g-right-button g-fab
+          g-right-button g-fab,
+          div:has(> div div[data-gmc]) c-wiz div[role="listitem"] div:has(> svg),
+          div:has(> div div[data-gmc]) c-wiz a[href^="/search?"] > div:first-child
           {
             background-color: var(--my-tertiary-color) !important;
           }
