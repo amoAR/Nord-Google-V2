@@ -130,6 +130,8 @@ function Run(observer) {
           .rc-anchor,
           div[aria-label="نتایج ویژه"] > div:first-of-type > div:first-of-type > div,
           div[aria-label="Featured results"] > div:first-of-type > div:first-of-type > div,
+          #rcnt:has(div[aria-label="نتایج ویژه"]) > div:has(> div:first-of-type > div.kp-wholepage-osrp) span[role="tab"] > span:first-of-type,
+          #rcnt:has(div[aria-label="Featured results"]) > div:has(> div:first-of-type > div.kp-wholepage-osrp) span[role="tab"] > span:first-of-type,
           #bres div[data-q] > div:first-of-type div[role="button"] > div:nth-child(2),
           div:has(> div:last-child#tools_1) + div a > div:first-of-type,
           div:has(> div > div > div > video) + div,
@@ -140,6 +142,12 @@ function Run(observer) {
           {
             background: var(--my-secondary-color) !important;
             background-color: var(--my-secondary-color) !important;
+          }
+
+          div[aria-label="نتایج ویژه"] > div:first-of-type > div:first-of-type > div,
+          div[aria-label="Featured results"] > div:first-of-type > div:first-of-type > div
+          {
+            border-radius: 1.2rem;
           }
 
           /* g-loading-icon + div:not(:has()):first-of-type, */
@@ -239,9 +247,20 @@ function Run(observer) {
           div:has(h1 + a[href^="/search?"] + a[href^="/search?"]) > a[href^="/search?"] > div:first-of-type,
           div:has(h1 + a[href^="/search?"] + a[href^="/search?"]) > a[href*="maps.google.com"] > div:first-of-type,
           span[aria-label="More Filters"],
-          g-menu-item a[role="menuitem"] > div
+          g-menu-item a[role="menuitem"] > div,
           {
             background-color: transparent !important;
+          }
+
+          a[href="#"] div:has(> span > svg[viewBox="0 0 24 24"]:first-child),
+          a[href="#"] div > span:first-of-type:has(> svg[viewBox="0 0 24 24"]:first-child)
+          {
+            background-color: transparent !important;
+            margin-right: -6px;
+          }
+
+          a[href="#"] span > svg[viewBox="0 0 24 24"]:first-child {
+            transform: rotate(45deg);
           }
 
           hr,
@@ -317,7 +336,6 @@ function Run(observer) {
 
 const searchResultContainer = document.getElementById('search');
 const observer = new MutationObserver(() => {
-  console.log("kirrrrrrrrrrrrrrrrr");
   Run(observer);
 });
 
