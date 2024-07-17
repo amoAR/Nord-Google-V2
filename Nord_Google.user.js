@@ -178,9 +178,10 @@ function Run(observer) {
           #rhsads ~ div[class="kp-wholepage-osrp"] > div:last-of-type #media_result_group,
           div.customCssInjected[data-phone_number],
           #main ~ *:not(div:has(> div div[data-gmc])),
-          div:has(> div div[data-gmc]) c-wiz + div
+          div:has(> div div[data-gmc]) c-wiz + div,
+          div:has(> a[href*="support.google.com"]) *
           {
-            display: none;
+            display: none !important;
           }
 
           div[data-ly*="/map"] .customCssInjected:first-of-type div:has(> img):first-of-type {
