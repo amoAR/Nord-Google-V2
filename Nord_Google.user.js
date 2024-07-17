@@ -291,7 +291,7 @@ function Run(observer) {
             position: relative !important;
           }
 
-          div[id="search"] div:not(a *):not(hr + div):not(div:has(> div > div > a[href^="/search?"])),
+          div[id="search"] div:not(a *):not(hr + div):not(div:has(> div > div > a[href^="/search?"])):not(div:has(> div > color-palette) *),
           .UUbT9 div[role="presentation"] + div[role="presentation"]
           {
             background-color: transparent !important;
